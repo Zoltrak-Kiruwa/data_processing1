@@ -26,6 +26,10 @@ hist(r)
 % Question 4.5
 Cost_J(p_th, D)
 
+%Question 4.6
+options = optimset(’fminsearch’)
+p_opt = fminsearch(@(p) Cost_J(p,D), p_init,options);   
+
 % Question 4.7
 J_estimate = r.'*r;
 disp(J_estimate);
